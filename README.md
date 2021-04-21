@@ -6,4 +6,4 @@
 
 - Here is the output:
 
-![alt text](https://github.com/KhoiUna/python_turtle_art/output.jpg "Stairway to Apollo")
+![alt text](https://raw.githubusercontent.com/KhoiUna/python_turtle_art/main/output.jpg "Stairway to Apollo")

@@ -1,6 +1,6 @@
 # Python Turtle Art - Stairway to Apollo (_Apollo is the God of the Sun_)
 
-- Using Python Turtle module to draw this masterpiece - a combination of **2D geometry**, **pop art** and **coding**
+- Using Python Turtle module to draw this masterpiece - a combination of **2D geometry**, **Pop Art** and **Coding**
 
 - Drawn inspiration from the rock song [Stairway to Heaven](https://youtu.be/QkF3oxziUI4)
 

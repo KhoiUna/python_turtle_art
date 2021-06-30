@@ -1,4 +1,4 @@
-from math import *
+from math import sqrt
 
 
 def draw_sun(turtle, circle_radius):

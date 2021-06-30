@@ -1,5 +1,5 @@
-from math import *
-from random import *
+from math import sqrt
+from random import random
 
 
 def draw_stair(turtle, length, height, diagonal_length):

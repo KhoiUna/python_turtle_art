@@ -1,5 +1,5 @@
 import turtle
-from math import *
+from math import sqrt
 from draw_stair import draw_stair
 from draw_sun import draw_sun
 from random import *
@@ -50,4 +50,5 @@ def main():
     turtle.exitonclick()
 
 
-main()
+if __name__ == '__main__':
+    main()

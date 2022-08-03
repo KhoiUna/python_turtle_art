@@ -1,7 +1,7 @@
 from math import sqrt
 
 
-def draw_sun(turtle, circle_radius: float):
+def draw_sun(turtle, circle_radius: float) -> None:
     turtle.width(2)
     turtle.color('yellow')
 

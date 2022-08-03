@@ -7,7 +7,7 @@ from random import *
 
 def main():
     steps = int(input("How many steps do you want to draw? "))
-    want_to_draw_sun = input("Do you want to draw a sun? (y/n) ")
+    want_to_draw_sun = input("Do you want to see the sun? (y/n) ")
 
     screen = turtle.Screen()
     screen.bgcolor('black')

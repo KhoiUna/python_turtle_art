@@ -2,7 +2,7 @@ from math import sqrt
 from random import random
 
 
-def draw_stair(turtle, length: float, height: float, diagonal_length: float):
+def draw_stair(turtle, length: float, height: float, diagonal_length: float) -> float:
     # Start: Draw rectangle
     turtle.color((random(), random(), random())) # randomize stair's color
     turtle.begin_fill()

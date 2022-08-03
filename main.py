@@ -6,11 +6,21 @@ from random import *
 
 
 def main():
+    steps = int(input("How many steps do you want to draw? "))
+    want_to_draw_sun = input("Do you want to draw a sun? (y/n) ")
+
+    screen = turtle.Screen()
+    screen.bgcolor('black')
+
     # Declare stairway's properties
-    steps = 15
-    length = steps * 140/9
-    height = (length / 3)
-    diagonal_length = length / 9 * sqrt(2)
+    # These ratios keep the stairway's proportions
+    LENGTH_RATIO = 140/9
+    HEIGHT_RATIO = 1/3
+    DIAGONAL_LENGTH_RATIO = 1/9 * sqrt(2)
+
+    length = steps * LENGTH_RATIO
+    height = length * HEIGHT_RATIO
+    diagonal_length = length * DIAGONAL_LENGTH_RATIO
 
     # Declare my_turtle
     my_turtle = turtle.Turtle()
@@ -21,31 +31,25 @@ def main():
 
     circle_radius = 0
     circle_down = 0
-    bg_color = 'black'
     # Draw stairway
     for i in range(0, steps):
+        # 
         if i > 3:
             circle_down += height
         if i == 7:
             circle_radius = length * 2
-
-        screen = turtle.Screen()
-        screen.bgcolor(bg_color)
+        
         length = draw_stair(my_turtle, length, height, diagonal_length)
         height = (length / 3)
-        diagonal_length = length / 9 * sqrt(2)
-        # Change background color
-        if bg_color == 'black':
-            bg_color = 'white'
-        else:
-            bg_color = 'black'
+        diagonal_length = length / 9 * sqrt(2)       
 
     # Finish the last stair
     my_turtle.forward(length)
     my_turtle.right(90)
 
     # Draw the sun
-    draw_sun(my_turtle, circle_radius)
+    if(want_to_draw_sun == 'y'):
+        draw_sun(my_turtle, circle_radius)
 
     turtle.exitonclick()
 

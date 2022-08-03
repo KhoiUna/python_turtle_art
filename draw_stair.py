@@ -2,9 +2,9 @@ from math import sqrt
 from random import random
 
 
-def draw_stair(turtle, length, height, diagonal_length):
-    # Draw rectangle
-    turtle.color((random(), random(), random()))
+def draw_stair(turtle, length: float, height: float, diagonal_length: float):
+    # Start: Draw rectangle
+    turtle.color((random(), random(), random())) # randomize stair's color
     turtle.begin_fill()
 
     turtle.forward(length)
@@ -18,6 +18,7 @@ def draw_stair(turtle, length, height, diagonal_length):
     turtle.forward(height)
 
     turtle.end_fill()
+    # End: Draw rectangle
 
     # Draw parallelogram's diagonal sides
     turtle.right(45)
@@ -31,7 +32,7 @@ def draw_stair(turtle, length, height, diagonal_length):
     x1 = turtle.xcor()
     y1 = turtle.ycor()
 
-    # Back to original position to draw rectangle
+    # Go back to the original position to draw the next rectangle
     turtle.back(diagonal_length)
     turtle.left(45)
     turtle.forward(length)
@@ -39,5 +40,5 @@ def draw_stair(turtle, length, height, diagonal_length):
     turtle.forward(diagonal_length)
     turtle.right(45)
 
-    # Return the new length
+    # Return the new length using Distance between two points formula: https://byjus.com/maths/distance-between-two-points-formula/
     return sqrt((turtle.xcor() - x1)**2 + (turtle.ycor() - y1))
